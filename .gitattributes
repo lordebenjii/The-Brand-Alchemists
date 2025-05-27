@@ -1,0 +1,16 @@
+# Ensure consistent line endings across operating systems
+* text=auto
+
+# Use Unix-style line endings for code files
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+
+# Binary files (don’t auto-convert line endings)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
