@@ -273,6 +273,18 @@
     });
   });
 </script>
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Latest Blog Posts</h2>
+    <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Blog posts inserted here by JS -->
+    </div>
+    <div class="text-center mt-12">
+      <a href="blog.html" class="inline-block bg-[#f07218] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e06010] transition">View All Posts</a>
+    </div>
+  </div>
+</section>
 
  <!-- About Section -->
 <section id="about" class="about-section">
@@ -437,6 +449,46 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   window.open(whatsappUrl, '_blank');
 });
 </script>
+      <script>
+  // Sample blog posts data
+  const blogPosts = [
+    {
+      title: "How to Style African Beads for Every Occasion",
+      date: "June 1, 2025",
+      summary: "Discover tips and tricks to wear your African bead accessories with confidence and style.",
+      url: "blog-post-1.html"
+    },
+    {
+      title: "The History and Meaning Behind Waistbeads",
+      date: "May 15, 2025",
+      summary: "Learn about the cultural significance of waistbeads and how they continue to inspire fashion.",
+      url: "blog-post-2.html"
+    },
+    {
+      title: "Top 5 Trending Beaded Earrings in Nairobi",
+      date: "May 5, 2025",
+      summary: "Check out the latest earring designs that are making waves in Nairobi's fashion scene.",
+      url: "blog-post-3.html"
+    }
+  ];
+
+  const container = document.getElementById('blog-posts');
+
+  blogPosts.forEach(post => {
+    const postEl = document.createElement('article');
+    postEl.className = 'bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition';
+
+    postEl.innerHTML = `
+      <h3 class="text-2xl font-semibold mb-2 text-[#852527]">${post.title}</h3>
+      <p class="text-sm text-gray-500 mb-4">${post.date}</p>
+      <p class="text-gray-700 mb-6">${post.summary}</p>
+      <a href="${post.url}" class="text-[#f07218] font-semibold hover:underline">Read More &rarr;</a>
+    `;
+
+    container.appendChild(postEl);
+  });
+</script>
+
 <!-- Footer -->
 <footer style="background-color: #111; color: #fff; text-align: center; padding: 1rem 0; margin-top: 50px; font-size: 0.9rem;">
   &copy; 2025 The Brand Alchemists. All rights reserved.
