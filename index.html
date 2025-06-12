@@ -22,6 +22,15 @@
         <span class="logo-text">The Brand Alchemists</span>
       </a>
 <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      <script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
